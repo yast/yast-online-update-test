@@ -11,7 +11,7 @@
 {
     {
         UI::ChangeWidget( `id (`server),	`Value,	1 );	// YComboBox
-        UI::ChangeWidget( `id (`url),	`Value,	"file:/usr/src/packages/BUILD/yast2-online-update-test/test-patches/" );	// YTextEntry
+        UI::ChangeWidget( `id (`url),	`Value,	"file:/usr/src/packages/BUILD/yast2-online-update-test/src/test-patches/" );	// YTextEntry
         UI::ChangeWidget( `id (`manual),	`Value,	false );	// YCheckBox
         UI::ChangeWidget( `id (`reload),	`Value,	true );	// YCheckBox
 

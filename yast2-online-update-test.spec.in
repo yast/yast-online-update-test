@@ -8,7 +8,7 @@
 # Please submit bugfixes or comments via http://www.suse.de/feedback/
 #
 
-# neededforbuild  acl apache2 apache2-prefork libapr0 attr cron curl expat gpp libgpp liby2util lukemftp mm openssl popt postgresql-libs pure-ftpd readline rpm yast2-packagemanager gdb yast2 yast2-core yast2-core-devel yast2-online-update yast2-packager yast2-installation yast2-storage yast2-country yast2-bootloader yast2-mouse yast2-x11 xorg-x11 xorg-x11-Xvfb freetype2 yast2-ncurses yast2-qt qt3 xorg-x11-libs fontconfig libpng openslp 
+# neededforbuild  acl apache2 apache2-prefork libapr0 attr cron curl expat gpp libgpp liby2util lukemftp mm openssl popt postgresql-libs pure-ftpd readline rpm yast2-packagemanager gdb yast2 yast2-core yast2-core-devel yast2-online-update yast2-packager yast2-installation yast2-storage yast2-country yast2-bootloader yast2-mouse yast2-x11 xorg-x11 xorg-x11-Xvfb freetype2 yast2-ncurses yast2-qt qt3 xorg-x11-libs fontconfig libpng openslp libxml2
 
 Name:         yast2-online-update-test
 Version:      @VERSION@
@@ -31,16 +31,17 @@ Authors:
     Cornelius Schumacher <cschum@suse.de>
 
 %prep
-%setup -n %{name}
+%setup
+ln -s %{name}-%{version} ../%{name}
+cd src
 mkdir -p /var/adm/YaST
 cp -r ProdDB /var/adm/YaST
 #mv proc/* /proc
 cp -r test-patches/i386 /srv/ftp
 
 %build
-
+cd src
 export Y2SLOG_FILE=/tmp/y2log
-
 ./testit --arch=%{_arch} 001
 
 %install

@@ -10,7 +10,7 @@ Xvfb :89 &
 export DISPLAY=:89
 
 /usr/lib/YaST2/bin/y2base online_update '(.nosigcheck)' '(.url)' \
-  '("file:/usr/src/packages/BUILD/yast2-online-update-test/test-patches/")' qt \
+  '("file:/usr/src/packages/BUILD/yast2-online-update-test/src/test-patches/")' qt \
   --macro tests/you1.macro.ycp
 
 [ "`rpm -q mydummy`" = "mydummy-1.0-1" ]
