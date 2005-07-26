@@ -1,0 +1,19 @@
+-------------------------------------------------------------------
+Tue Jul 26 18:33:18 CEST 2005 - mir@suse.de
+
+- It didn't work under new svn repository, so I made it build on 
+  automake and changed paths in tests so that the tests etc.
+  reside under 'src'
+- added libxml2 to neededforbuild
+- 2.12.0
+
+-------------------------------------------------------------------
+Tue Aug 10 13:26:37 CEST 2004 - cschum@suse.de
+
+- Switch to apache2.
+
+-------------------------------------------------------------------
+Fri Feb 20 12:12:21 CET 2004 - cschum@suse.de
+
+- Initial version.
+
