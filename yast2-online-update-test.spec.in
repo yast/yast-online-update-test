@@ -16,7 +16,7 @@ Release:      0
 License:      YaST License
 Group:        System/YaST
 BuildRoot:    %{_tmppath}/%{name}-%{version}-build
-Source0:      yast2-online-update-test-%{version}.tar.bz2
+Source0:      yast2-online-update-test-@VERSION@.tar.bz2
 prefix:		/usr
 Summary:      yast2-online-update tests
 
