@@ -1,4 +1,0 @@
-if [ -e /var/log/YaST2 ]; then rm -r /var/log/YaST2; fi
-mkdir -p /var/log/YaST2
-mkdir -p /var/adm/YaST/
-cp -r ProdDB /var/adm/YaST

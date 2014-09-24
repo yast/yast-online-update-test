@@ -1,4 +1,0 @@
-rpm -q mydummy && rpm -e mydummy
-rpm -q mydummy2 && rpm -e mydummy2
-
-true
